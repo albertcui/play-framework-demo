@@ -18,5 +18,8 @@ public class Application extends Controller {
     public Result potato() {
         return ok(potato_view.render());
     }
-
+    
+    public Result dynamic(String name) {
+        return ok(a_dynamic_page.render(name));
+    }
 }

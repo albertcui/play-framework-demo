@@ -1,0 +1,13 @@
+@*
+    https://www.playframework.com/documentation/2.4.x/JavaTemplates
+*@
+
+@(name: String)
+
+<h1>
+    @if(name.isEmpty()) {
+        Nameless :O
+    } else {
+        Your name is @name.
+    }
+</h1>
