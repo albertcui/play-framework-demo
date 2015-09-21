@@ -1,0 +1,26 @@
+@*
+https://www.playframework.com/documentation/2.0/JavaFormHelpers
+*@
+
+@(myForm: Form[ToDo], toDos: List[ToDo])
+
+@for(t <- toDos) {
+  <li>
+    @t.description (
+    @if(t.done) {
+        "Done"
+    } else {
+        "Not Done"
+    })
+  </li>
+} 
+
+<h2>Add a To-Do</h2>
+@helper.form(action = routes.Application.submit()) {
+    
+    @helper.inputText(myForm("description"))
+    @helper.checkbox(myForm("done"))
+    
+    <button type="submit">Add</button>
+    
+}
