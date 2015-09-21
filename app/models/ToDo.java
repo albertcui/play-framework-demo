@@ -9,6 +9,7 @@ import play.db.ebean.*;
 public class ToDo extends Model {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
     
     public String description;

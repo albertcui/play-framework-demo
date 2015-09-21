@@ -48,8 +48,7 @@ public class Application extends Controller {
         if (toDoForm.hasErrors()) {
             return badRequest("Uh oh");
         } else {
-            System.out.println(toDoForm.get("description"));
-            System.out.println("---------------------------");
+            
             (new ToDo(toDoForm.get("description"), toDoForm.get("done") != null ? true : false))
                 .save();
                 
